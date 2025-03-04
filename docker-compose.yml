@@ -1,0 +1,12 @@
+services:
+  db:
+    image: postgres:16
+    container_name: resume_ai_db
+    environment:
+      POSTGRES_USER: limas61
+      POSTGRES_PASSWORD: limas123
+      POSTGRES_DB: resume_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - "C:\\Users\\USUARIO1\\Documents\\Cubos Academy - Desenvolvimento de Software\\db_data:/var/lib/postgresql/data"
