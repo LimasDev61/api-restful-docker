@@ -32,7 +32,7 @@ Este repositório contém a solução do desafio técnico proposto pela **Cubos 
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/seu-usuario/desafio-api-cubos.git](https://github.com/LimasDev61/api-restful-docker.git
+git clone https://github.com/seu-usuario/desafio-api-cubos.git
 cd api-restful-docker
 ```
 
