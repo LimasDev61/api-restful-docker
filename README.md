@@ -1,7 +1,7 @@
 
 # 📘 Desafio Técnico – API RESTful com PostgreSQL
 
-Este repositório contém a solução do desafio técnico proposto pela **Cubos Tecnologia**, desenvolvido por **Renan Lima**. O desafio consiste na construção de uma API RESTful utilizando **Node.js** com **PostgreSQL**. O objetivo principal é permitir o gerenciamento de usuários, matérias e resumos, com autenticação e autorização via JWT.
+Este repositório contém a solução do desafio técnico proposto pela **Cubos Academy**, desenvolvido por **Renan Lima**. O desafio consiste na construção de uma API RESTful utilizando **Node.js** com **PostgreSQL**. O objetivo principal é permitir o gerenciamento de usuários, matérias e resumos, com autenticação e autorização via JWT.
 
 ---
 
