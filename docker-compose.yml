@@ -1,12 +1,13 @@
 services:
   db:
-    image: postgres:16
-    container_name: resume_ai_db
+    container_name: desafio_backend_sql_api_rest_db
+    image: postgres:16-alpine
     environment:
-      POSTGRES_USER: limas61
-      POSTGRES_PASSWORD: limas123
-      POSTGRES_DB: resume_ai
-    ports:
-      - "5432:5432"
+      - POSTGRES_USER=limas
+      - POSTGRES_PASSWORD=limas123
+      - POSTGRES_DB=resume_ai
     volumes:
-      - "C:\\Users\\USUARIO1\\Documents\\Cubos Academy - Desenvolvimento de Software\\db_data:/var/lib/postgresql/data"
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+

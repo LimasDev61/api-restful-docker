@@ -1,18 +1,22 @@
-import { Request, Response, Router } from "express";
-import { UsuarioControl } from "./controlador/usuarios-controles";
-import { MateriasControl } from "./controlador/materia-control";
-import { validarToken } from "./util/validador-de-token";
-import { ResumoControl } from "./controlador/resumos-control";
+import { Router } from "express";
+import { CriarUsuario } from "./controller/criar-usuario";
+import { LoginUsuario } from "./controller/login-usuario";
+import { validarToken } from "./intermediarios/validarToken";
+import { FindMateria } from "./controller/find-materia";
+import { CriarResumo } from "./controller/criar-resumo";
+import { ListarResumos } from "./controller/listar-resumos";
+import { EditarResumo } from "./controller/editar-resumo";
+import { DeletarResumo } from "./controller/deletar-resumos";
 
 export const rotas = Router();
 
-const usuarioControl = new UsuarioControl();
-const materiasControl = new MateriasControl();
-const resumoControl = new ResumoControl();
+rotas.post("/usuarios", new CriarUsuario().criar);
+rotas.post("/login", new LoginUsuario().login);
 
-rotas.post("/usuarios", usuarioControl.cadastrar.bind(usuarioControl));
-rotas.post("/login", usuarioControl.login.bind(usuarioControl));
+rotas.use(validarToken);
+rotas.delete("/resumos/:id", new DeletarResumo().deletar);
 
-rotas.get("/materias", validarToken, materiasControl.listar.bind(materiasControl));
-
-rotas.get("/resumes", validarToken, resumoControl.criarResumo.bind(resumoControl));
+rotas.get("/materias", new FindMateria().find);
+rotas.post("/resumos", new CriarResumo().criarResumo);
+rotas.get("/resumos", new ListarResumos().listar);
+rotas.put("/resumos/:id", new EditarResumo().editar);
