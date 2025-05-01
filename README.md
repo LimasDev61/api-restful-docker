@@ -32,8 +32,8 @@ Este repositório contém a solução do desafio técnico proposto pela **Cubos 
 1. **Clone o repositório:**
 
 ```bash
-git clone https://github.com/seu-usuario/desafio-api-cubos.git
-cd desafio-api-cubos
+git clone https://github.com/seu-usuario/desafio-api-cubos.git](https://github.com/LimasDev61/api-restful-docker.git
+cd api-restful-docker
 ```
 
 2. **Configure as variáveis de ambiente:**
@@ -48,8 +48,6 @@ DB_PASSWORD=sua_senha
 DB_NAME=nome_do_banco
 JWT_SECRET=sua_chave_secreta
 ```
-
-> Um arquivo `.env.example` está incluído para referência.
 
 3. **Execute a aplicação com Docker:**
 
